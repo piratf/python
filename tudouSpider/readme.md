@@ -29,4 +29,4 @@ Here is the guide:
 
 So happy to use!
 
-[Process]:http://7teaeb.com1.z0.glb.clouddn.com/Process.png
+[Process]:http://7teaeb.com1.z0.glb.clouddn.com/Process1.png
