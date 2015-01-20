@@ -2,6 +2,8 @@
 
     get real-links from tudou.com
 
+[Get more details at here][details]
+
 Yes it's just a training code to help me learn python, don't use it for commercial purposes please.
 
 But it's an useful tool for guys often watch *TV drama program* like me. 
@@ -30,3 +32,4 @@ Here is the guide:
 So happy to use!
 
 [Process]:http://7teaeb.com1.z0.glb.clouddn.com/Process1.png
+[details]:http://piratf.github.io/2015/01/20/Spider_in_tudou.com/

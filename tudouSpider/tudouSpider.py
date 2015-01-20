@@ -38,7 +38,7 @@ def linkServer(url):
 
 ### decode and encode 
 def decodeStr(str):
-    return str.decode('utf-8').encode(type)
+    return str.decode('utf8','ignore').encode(type, 'ignore')
 ###
 
 ### check number
@@ -117,7 +117,7 @@ class GetList(SGMLParser):
         for k,v in attrs:   #traversal all properties
             if k == self.subSubAtt:  # get in!
                 # print 'hello'
-                self.IDlist.append(v.decode('utf8','ignore').encode(type, 'ignore'))  
+                self.IDlist.append(decodeStr(v))  
                 return
         self.getdata = True  
           
@@ -137,7 +137,7 @@ class GetList(SGMLParser):
 
 class BTSpider:
     def __init__(self, condition):
-        condition = urllib2.quote(condition.decode(type).encode('utf-8'))
+        condition = urllib2.quote(condition.decode(type).encode('utf-8'), ":?=/")
         self.myUrl = 'http://www.soku.com/t/nisearch/'+ condition
         self.condition = condition
         self.title = condition
@@ -252,6 +252,8 @@ print decodeStr('''
 #   (●°-°●)​ 」[ 一脸正经
 #   
 #   你输入的任何内容将被提交到土豆网上进行搜索 
+#
+#    名字前面带'$'符号的是剧集，纯名字的是视频
 #   
 #   独立视频可以调用浏览器中打开
 #
