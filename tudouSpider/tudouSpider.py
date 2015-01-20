@@ -118,7 +118,7 @@ class GetList(SGMLParser):
             if k == self.subSubAtt:  # get in!
                 # print 'hello'
                 self.IDlist.append(v.decode('utf8','ignore').encode(type, 'ignore'))  
-                return  
+                return
         self.getdata = True  
           
     def end_img(self):      
@@ -132,8 +132,8 @@ class GetList(SGMLParser):
         print 'ID - '
         no = 0
         for i in self.IDlist:  
-            print no, ':', i
-            no += 1;
+            print no, ':', '$' if self.value == 'G' else '', i  # ternary operator in python 
+            no += 1;    
 
 class BTSpider:
     def __init__(self, condition):
@@ -155,17 +155,17 @@ class BTSpider:
     def dealSearch(self):
         ### overload the 'GetList' function
         lister = GetList(True, 'class', 'G', 'alt')
-        self.type = 'G'
+        self.type = 'drama'
         lister.feed(self.myPage)
         if lister.empty():
             lister = GetList(True, 'class', 'v', 'alt')   # if just some video not drama, the value of class will change
-            self.type = 'v'
+            self.type = 'video'
             lister.feed(self.myPage)
         lister.printID()    # print the result list out
         ###
 
         ### choose items to analyze
-        if self.type == 'v':
+        if self.type == 'video':
             choosed = raw_input('enter the No. to visit online or enter \'q\' to quit: ')
             while choosed != 'q':
                 while not isNum(choosed):
@@ -175,7 +175,7 @@ class BTSpider:
                 listerlink.feed(self.myPage)
                 webbrowser.open(listerlink.IDlist[int(choosed)])
                 choosed = raw_input('enter the No. to visit online or enter q to quit: ')
-        elif self.type == 'G':
+        elif self.type == 'drama':
             choosed = raw_input('enter the No. or enter a to download, q to quit: ')
             while choosed != 'q':
                     while not isNum(choosed) and choosed != 'a':
@@ -190,9 +190,7 @@ class BTSpider:
                         dramaTitle = str(lister.IDlist[int(choosed)])   # transfer to digit
                         listerlink = GetList(False, 'class', 'panel_15', 'herf', dramaTitle)
                         listerlink.feed(self.myPage)
-                        for link in listerlink.IDlist:
-                            print link
-                        #self.writeText(dramaTitle, listerlink)
+                        self.writeText(dramaTitle, listerlink)
                     choosed = raw_input('\renter the No. or enter a to download all: ')
         ###
 
@@ -249,7 +247,7 @@ class BTSpider:
             print 'Not Found nextPage..'
 
 print decodeStr('''
-##########   Welcome to tudouSpider ###########
+###############   Welcome to tudouSpider ############
 #
 #   (●°-°●)​ 」[ 一脸正经
 #   
@@ -259,11 +257,9 @@ print decodeStr('''
 #
 #   剧集可以选择一集，整季，或整个系列进行地址解析
 #   
-#   在当前文件夹里出现真实下载地址的txt文件
-#   
-#   复制所有地址到下载工具即可[ 勾
+#   解析后的real-links会保存在当前文件夹下的txt文件中
 #
-###############################################
+####################################################
 ''')
 
 condition = raw_input('tell me what you want:\n =>')
