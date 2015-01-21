@@ -23,10 +23,10 @@ The route is like this.
 Here is the guide:
  > * first input the keyword.
  > * if drama now choose one
-    > * input num to download real-links, add 'v' to view in webbrowser.
+    > * input num to download real-links
     > * input 'a' to download all.
  > * if Independent video
-    > * input num to view in webbrowser, add 'd' to download real-links.
+    > * input num to view in webbrowser.
  > * You can use any tools to download files from the real-links directly.
 
 So happy to use!
