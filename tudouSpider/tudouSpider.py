@@ -76,9 +76,7 @@ class GetList(SGMLParser):
             self.verbatim +=1   # add 1 more when get into sublayer
             return  
         for k,v in attrs:   #traversal all properties
-            # print k, v
             if k == self.attribute and v == self.value:  # get in!
-                # print 'hello'
                 self.getDiv = True  
                 return  
   
@@ -116,7 +114,6 @@ class GetList(SGMLParser):
             return  
         for k,v in attrs:   #traversal all properties
             if k == self.subSubAtt:  # get in!
-                # print 'hello'
                 self.IDlist.append(decodeStr(v))  
                 return
         self.getdata = True  
