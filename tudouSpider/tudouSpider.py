@@ -197,9 +197,9 @@ class BTSpider:
             f = open(dramaTitle + '.txt', 'w')
             for link in listerlink.IDlist:
                 f.write('\nEpisode %d\n\n' % i)
-                self.getReallink(dramaTitle, link, f)
+                f.write(' ' + link + '\n')  # if you need original address
+                # self.getReallink(dramaTitle, link, f)
                 i += 1
-                # f.write(' ' + link + '\n')  # if you need original address
             f.close()
         else:
             print ('can\'t find links') 

@@ -31,5 +31,13 @@ Here is the guide:
 
 So happy to use!
 
+------
+
+**Here**: Due to copyright reasons, the real address resolution process closed. but still can search and get links.
+
+sorry for that.
+
+I'm doing something even better~
+
 [Process]:http://7teaeb.com1.z0.glb.clouddn.com/Process1.png
 [details]:http://piratf.github.io/2015/01/20/Spider_in_tudou.com/
