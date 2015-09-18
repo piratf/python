@@ -1,0 +1,5 @@
+﻿{
+    "source":"E:\Code\Python\Backups\complete,E:\Code\Python\Backups\新建文件夹",
+    "target":"E:\Code\Python\Backups\bak",
+    "ignore":"E:\Code\Python\Backups\新建文件夹\123"
+}

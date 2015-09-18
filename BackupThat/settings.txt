@@ -1,0 +1,6 @@
+﻿{
+    "source":"E:\Git\python\BackupThat,
+            E:\Git\python\BackupThat\exec",
+    "target":"E:\Git\python\BackupThat\bak",
+    "ignore":"E:\Git\python\BackupThat\exec"
+}

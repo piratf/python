@@ -6,13 +6,11 @@
 
 Yes it's just a training code to help me learn python, don't use it for commercial purposes please.
 
-But it's an useful tool for guys often watch *TV drama program* like me. 
-
-Abroad program is diffcult to see in China. Thanks for these website who buy the rights for us, and we can watch them online.
+But it's an useful tool for people often looking for *TV drama program* like my friends. 
 
 But:
- > * I'm too lazy to click once and once for episode to episode again.
- > * We don't have good *internet speed*, Oh it's terrible for online video.
+ > * I'm too lazy to click once and once by episode to episode around.
+ > * Sometimes we don't have good *internet speed*, Oh it's terrible for online video.
  > * And so on. I want to download the program in the harddisk.
  > * So you can *watch it anytime you want*.
 
@@ -33,7 +31,7 @@ So happy to use!
 
 ------
 
-**Here**: Due to copyright reasons, the real address resolution process closed. but still can search and get links.
+**Here**: Due to copyright reasons, the real address resolution process closed. but still can search and get your links.
 
 sorry for that.
 
