@@ -9,7 +9,11 @@ empty folders will be skipped.
 with Python3.
 or .exe file in folder "exec" has the same function.
 
-'/' or '\' will all ok.    
+'/' or '\' will all ok.
+
+---
+
+the `bak` folder was for test, there are some generated output file built when testing. it's unnecessary.
 
 ####Usage:
 Open the settings.txt file. (It's saved with utf-8 encoding, notepad.exe on windows might have BOM head but it's ok)
@@ -21,7 +25,7 @@ Here is en example:
         E:/Git/python/BackupThat/新建文件夹",
     "target":"E:/Git/python/BackupThat/bak",
     "ignore":"E:/Git/python/BackupThat/新建文件夹/2"
-}   
+}
 ```
 
 list the path of folders you want to backup in the quotes after "source", split with `,`, same as other two.
