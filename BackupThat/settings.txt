@@ -1,6 +1,6 @@
 ﻿{
-    "source":"E:\Git\python\BackupThat,
-            E:\Git\python\BackupThat\exec",
+    "source":"E:\Git\python\BackupThat\exec,
+        E:\Git\python\BackupThat\新建文件夹",
     "target":"E:\Git\python\BackupThat\bak",
-    "ignore":"E:\Git\python\BackupThat\exec"
+    "ignore":"E:\Git\python\BackupThat\新建文件夹\2"
 }

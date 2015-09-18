@@ -9,16 +9,19 @@ empty folders will be skipped.
 with Python3.
 or .exe file in folder "exec" has the same function.
 
-###Usage:
-Open the settings.txt file. (It's saved with utf-8 encoding)
+'/' or '\' will all ok.    
+
+####Usage:
+Open the settings.txt file. (It's saved with utf-8 encoding, notepad.exe on windows might have BOM head but it's ok)
 
 Here is en example:
 ``` json
 {
-    "source":"E:\Code\Python\Backups\complete,E:\Code\Python\Backups\新建文件夹",
-    "target":"E:\Code\Python\Backups\bak",
-    "ignore":"E:\Code\Python\Backups\新建文件夹\123"
-}
+    "source":"E:/Git/python/BackupThat/exec,
+        E:/Git/python/BackupThat/新建文件夹",
+    "target":"E:/Git/python/BackupThat/bak",
+    "ignore":"E:/Git/python/BackupThat/新建文件夹/2"
+}   
 ```
 
 list the path of folders you want to backup in the quotes after "source", split with `,`, same as other two.
