@@ -1,6 +1,8 @@
 ##BackupThat
 ------
 
+中文参考内容：http://piratf.github.io/2015/09/19/BackupThat/
+
 List "SourceDir" you want to backup, give me "targetDir" you want to put the zip files in, and I can jump over the folders in "ignoreDir" you don't want to keep.
 
 the directory structure under the sourcePath will be kept.
