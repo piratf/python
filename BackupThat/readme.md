@@ -33,3 +33,5 @@ list the path of folders you want to backup in the quotes after "source", split 
 Attention: "target" path must be single.
 
 Then running the .exe file or .py file. enter the comment you want for this backup.
+
+---

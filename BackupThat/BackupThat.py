@@ -101,8 +101,7 @@ class BackupThat:
 
         # comments
         # you can input the comment at each time
-        # comment = input('Enter a comment if you need --> ')
-        comment = ""
+        comment = input('Enter a comment if you need --> ')
         # the space will be replace to '_'
         if len(comment) == 0:
             self.targetDir = today + '/' + now
