@@ -11,7 +11,6 @@ import json
 import codecs
 import zipfile
 
-
 class BackupThat:
     sourceDir = []
     targetDir = []
@@ -29,6 +28,7 @@ class BackupThat:
         '''
 
         try:
+            # relocate to where the program running
             fileHandle = codecs.open(
                 os.getcwd() + "\settings.txt", 'r+', encoding='utf-8-sig')
             # fileHandle = open(r"source.txt", 'r')
@@ -41,7 +41,7 @@ class BackupThat:
             self.targetDir = [s.strip() for s in data["target"].split(',')]
             self.ignoreDir = [s.strip() for s in data["ignore"].split(',')]
         except IOError as err:
-            print("Attention: ->reading files error")
+            print("Attention: ->reading setting files error")
             print(err)
 
     # check end and create inexistent folders
@@ -94,14 +94,15 @@ class BackupThat:
         today = self.targetDir + '/' + time.strftime('%Y%m%d')
         if not os.path.exists(today):
             os.makedirs(today)
-            print("Successfully created directory")
+            print("Successfully created today's directory")
         # use time to name the backup dirs
         now = time.strftime('%H%M%S')
         ##################################################################
 
         # comments
         # you can input the comment at each time
-        comment = input('Enter a comment if you need --> ')
+        comment = 'test'
+        # comment = input('Enter a comment if you need --> ')
         # the space will be replace to '_'
         if len(comment) == 0:
             self.targetDir = today + '/' + now
@@ -114,7 +115,7 @@ class BackupThat:
         # check if need to build the new folder
         if not os.path.exists(self.targetDir):
             os.makedirs(self.targetDir)
-            print("Successfully created directory")
+            print("Successfully created target directory")
         print("Welcome today")
 
     # backup main process
@@ -155,19 +156,38 @@ def zipFiles2TargetPath(sourcePath, targetPath, exclude=[]):
     the directory structure under the sourcePath will be kept.
     empty folders will be skipped.
     using "zipfile" in the standard library'''
+
+    print (sourcePath)
+    print (targetPath)
+    print (exclude)
+
     print("start zip")
     filesCount = 0
     # ignore unnecessary path in zip file
     os.chdir(sourcePath)
     f = zipfile.ZipFile(targetPath, 'w', zipfile.ZIP_DEFLATED)
     for dirpath, dirnames, filenames in os.walk(sourcePath):
+        # print ('before exclude')
+        # print ('++++++++++++++++++++++++++++')
+        # print (dirpath)
+        # print ('============================')
+        # print (dirnames)
+        # print ('>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        # print (filenames)
 
         # Rule out the folders in ignoreDir
         for excludePath in exclude:
             for dn in dirnames:
+                print ('>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print (dirpath + dn + '/')
                 if excludePath == dirpath + dn + '/':
                     dirnames.remove(excludePath.split('/')[-2])
+
+        # print ('============================')
+        # print ('after exclude')
+        # for dirs in dirnames:
+        #     print (dirs)
+        # print ('============================')
 
         # Write files
         for filename in filenames:
@@ -175,16 +195,13 @@ def zipFiles2TargetPath(sourcePath, targetPath, exclude=[]):
             # at here we will report the process
             print('dealing %s\r' % filesCount, end='')
             sys.stdout.flush()
-            dirpath = dirpath.replace('\\', '/')
-            dirname = dirpath.split('/')[-1]
-            filePath = filename if dirname == "" else './' + dirname + '/' + filename
+            filePath = dirpath + '/' + filename
             # print (dirpath.split('/'))
-            # print (filePath)
+            print (filePath)
             f.write(filePath)
     f.close()
     print("zip completed")
     return filesCount
-
 
 try:
     demo = BackupThat()

@@ -3,22 +3,22 @@
 
 中文参考内容：http://piratf.github.io/2015/09/19/BackupThat/
 
-List "SourceDir" you want to backup, give me "targetDir" you want to put the zip files in, and I can jump over the folders in "ignoreDir" you don't want to keep.
+Tell me "SourceDir" which you want to backup, give me "targetDir" which you want to put the bak files in, and I can skip the folders in "ignoreDir" which you don't want to keep.
 
 the directory structure under the sourcePath will be kept.
 empty folders will be skipped.
 
 with Python3.
-or .exe file in folder "exec" has the same function.
+or use the .exe file in folder "exec" if you don't have a python runtime.
 
 '/' or '\' will all ok.
 
 ---
 
-the `bak` folder was for test, there are some generated output file built when testing. it's unnecessary.
+the `bak` folder was only for test, there are some generated output file built when testing. don't care about those files.
 
 ####Usage:
-Open the settings.txt file. (It's saved with utf-8 encoding, notepad.exe on windows might have BOM head but it's ok)
+Open the settings.txt file. (It's saved with utf-8 encoding, notepad on windows might have "BOM head" but it's still ok)
 
 Here is en example:
 ``` json
@@ -30,9 +30,9 @@ Here is en example:
 }
 ```
 
-list the path of folders you want to backup in the quotes after "source", split with `,`, same as other two.
+list the path of folders you want to backup in the quotes after "source", split with `,`, than the other two as well.
 
-Attention: "target" path must be single.
+Attention: I could work with **only one** "target" path.
 
 Then running the .exe file or .py file. enter the comment you want for this backup.
 
