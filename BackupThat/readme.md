@@ -15,8 +15,6 @@ or use the .exe file in folder "exec" if you don't have a python runtime.
 
 ---
 
-the `bak` folder was only for test, there are some generated output file built when testing. don't care about those files.
-
 ####Usage:
 Open the settings.txt file. (It's saved with utf-8 encoding, notepad on windows might have "BOM head" but it's still ok)
 

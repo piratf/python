@@ -1,6 +1,5 @@
 ﻿{
-    "source":"E:\Git\python\BackupThat\exec,
-        E:\Git\python\BackupThat\新建文件夹",
-    "target":"E:\Git\python\BackupThat\bak",
-    "ignore":"E:\Git\python\BackupThat\新建文件夹\2"
+    "source":"E:\Git\hexo, E:\Code\ASM",
+    "target":"E:\Git\hexoBackup",
+    "ignore":"E:\Git\hexo\.deploy_git,E:\Git\hexo\.git,E:\Git\hexo\node_modules"
 }

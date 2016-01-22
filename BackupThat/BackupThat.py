@@ -53,7 +53,7 @@ class BackupThat:
             if d[-1] != '/':
                 d = d + '/'
             if not os.path.isdir(d):
-                print('Attention: ' + d +
+                print('Attention**: ' + d +
                       r" is not a dir, but in the dir array. it's will be created.")
                 os.makedirs(d)
             newdir.append(d)
@@ -63,15 +63,15 @@ class BackupThat:
     def checkLens(self):
         # judge lengths
         if len(self.targetDir) > 1:
-            print("target more than one, please modify that")
+            print("Attention**: target more than one, please check the setting.txt")
             return
         elif len(self.targetDir) < 1:
-            print("can't find any target path")
+            print("Attention**: can't find any target path, please check the setting.txt")
             return
         else:
             self.targetDir = self.targetDir[0]
         if len(self.sourceDir) < 1:
-            print("can't find any source path")
+            print("Attention**: can't find any source path, please check the setting.txt")
             return
 
     # print folders path to check again
@@ -101,8 +101,7 @@ class BackupThat:
 
         # comments
         # you can input the comment at each time
-        comment = 'test'
-        # comment = input('Enter a comment if you need --> ')
+        comment = input('Enter a comment if you need --> ')
         # the space will be replace to '_'
         if len(comment) == 0:
             self.targetDir = today + '/' + now

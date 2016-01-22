@@ -1,5 +1,5 @@
 ﻿{
-    "source":"E:\Git\hexo",
+    "source":"E:\Git\hexo, E:\Code\ASM",
     "target":"E:\Git\hexoBackup",
     "ignore":"E:\Git\hexo\.deploy_git,E:\Git\hexo\.git,E:\Git\hexo\node_modules"
 }
